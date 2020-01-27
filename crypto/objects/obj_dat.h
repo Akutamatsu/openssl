@@ -1098,7 +1098,7 @@ static const unsigned char so[7928] = {
     0x2B,0x06,0x01,0x04,0x01,0x82,0x37,0x59,0x02,0x02,0x15,  /* [ 7916] OBJ_p384_qteslapiii */
 };
 
-#define NUM_NID 1277
+#define NUM_NID 1243
 static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"UNDEF", "undefined", NID_undef},
     {"rsadsi", "RSA Data Security, Inc.", NID_rsadsi, 6, &so[0]},
@@ -2302,26 +2302,9 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"frodo976shake", "frodo976shake", NID_frodo976shake},
     {"frodo1344aes", "frodo1344aes", NID_frodo1344aes},
     {"frodo1344shake", "frodo1344shake", NID_frodo1344shake},
-    {"bike1l1cpa", "bike1l1cpa", NID_bike1l1cpa},
-    {"bike1l3cpa", "bike1l3cpa", NID_bike1l3cpa},
-    {"bike1l1fo", "bike1l1fo", NID_bike1l1fo},
-    {"bike1l3fo", "bike1l3fo", NID_bike1l3fo},
-    {"kyber512", "kyber512", NID_kyber512},
-    {"kyber768", "kyber768", NID_kyber768},
-    {"kyber1024", "kyber1024", NID_kyber1024},
-    {"newhope512cca", "newhope512cca", NID_newhope512cca},
-    {"newhope1024cca", "newhope1024cca", NID_newhope1024cca},
-    {"ntru_hps2048509", "ntru_hps2048509", NID_ntru_hps2048509},
-    {"ntru_hps2048677", "ntru_hps2048677", NID_ntru_hps2048677},
-    {"ntru_hps4096821", "ntru_hps4096821", NID_ntru_hps4096821},
-    {"ntru_hrss701", "ntru_hrss701", NID_ntru_hrss701},
-    {"lightsaber", "lightsaber", NID_lightsaber},
-    {"saber", "saber", NID_saber},
-    {"firesaber", "firesaber", NID_firesaber},
-    {"sidhp434", "sidhp434", NID_sidhp434},
-    {"sidhp503", "sidhp503", NID_sidhp503},
-    {"sidhp610", "sidhp610", NID_sidhp610},
-    {"sidhp751", "sidhp751", NID_sidhp751},
+    {"kyber512_90s", "kyber512_90s", NID_kyber512_90s},
+    {"kyber768_90s", "kyber768_90s", NID_kyber768_90s},
+    {"kyber1024_90s", "kyber1024_90s", NID_kyber1024_90s},
     {"sikep434", "sikep434", NID_sikep434},
     {"sikep503", "sikep503", NID_sikep503},
     {"sikep610", "sikep610", NID_sikep610},
@@ -2333,26 +2316,9 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"p256_frodo976shake", "p256_frodo976shake", NID_p256_frodo976shake},
     {"p256_frodo1344aes", "p256_frodo1344aes", NID_p256_frodo1344aes},
     {"p256_frodo1344shake", "p256_frodo1344shake", NID_p256_frodo1344shake},
-    {"p256_bike1l1cpa", "p256_bike1l1cpa", NID_p256_bike1l1cpa},
-    {"p256_bike1l3cpa", "p256_bike1l3cpa", NID_p256_bike1l3cpa},
-    {"p256_bike1l1fo", "p256_bike1l1fo", NID_p256_bike1l1fo},
-    {"p256_bike1l3fo", "p256_bike1l3fo", NID_p256_bike1l3fo},
-    {"p256_kyber512", "p256_kyber512", NID_p256_kyber512},
-    {"p256_kyber768", "p256_kyber768", NID_p256_kyber768},
-    {"p256_kyber1024", "p256_kyber1024", NID_p256_kyber1024},
-    {"p256_newhope512cca", "p256_newhope512cca", NID_p256_newhope512cca},
-    {"p256_newhope1024cca", "p256_newhope1024cca", NID_p256_newhope1024cca},
-    {"p256_ntru_hps2048509", "p256_ntru_hps2048509", NID_p256_ntru_hps2048509},
-    {"p256_ntru_hps2048677", "p256_ntru_hps2048677", NID_p256_ntru_hps2048677},
-    {"p256_ntru_hps4096821", "p256_ntru_hps4096821", NID_p256_ntru_hps4096821},
-    {"p256_ntru_hrss701", "p256_ntru_hrss701", NID_p256_ntru_hrss701},
-    {"p256_lightsaber", "p256_lightsaber", NID_p256_lightsaber},
-    {"p256_saber", "p256_saber", NID_p256_saber},
-    {"p256_firesaber", "p256_firesaber", NID_p256_firesaber},
-    {"p256_sidhp434", "p256_sidhp434", NID_p256_sidhp434},
-    {"p256_sidhp503", "p256_sidhp503", NID_p256_sidhp503},
-    {"p256_sidhp610", "p256_sidhp610", NID_p256_sidhp610},
-    {"p256_sidhp751", "p256_sidhp751", NID_p256_sidhp751},
+    {"p256_kyber512_90s", "p256_kyber512_90s", NID_p256_kyber512_90s},
+    {"p256_kyber768_90s", "p256_kyber768_90s", NID_p256_kyber768_90s},
+    {"p256_kyber1024_90s", "p256_kyber1024_90s", NID_p256_kyber1024_90s},
     {"p256_sikep434", "p256_sikep434", NID_p256_sikep434},
     {"p256_sikep503", "p256_sikep503", NID_p256_sikep503},
     {"p256_sikep610", "p256_sikep610", NID_p256_sikep610},
@@ -2379,7 +2345,7 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"p384_qteslapiii", "p384_qteslapiii", NID_p384_qteslapiii, 11, &so[7916]},
 };
 
-#define NUM_SN 1268
+#define NUM_SN 1234
 static const unsigned int sn_objs[NUM_SN] = {
      364,    /* "AD_DVCS" */
      419,    /* "AES-128-CBC" */
@@ -2692,10 +2658,6 @@ static const unsigned int sn_objs[NUM_SN] = {
      882,    /* "authorityRevocationList" */
       87,    /* "basicConstraints" */
      365,    /* "basicOCSPResponse" */
-    1202,    /* "bike1l1cpa" */
-    1204,    /* "bike1l1fo" */
-    1203,    /* "bike1l3cpa" */
-    1205,    /* "bike1l3fo" */
      285,    /* "biometricInfo" */
      921,    /* "brainpoolP160r1" */
      922,    /* "brainpoolP160t1" */
@@ -2788,9 +2750,9 @@ static const unsigned int sn_objs[NUM_SN] = {
      939,    /* "dhSinglePass-stdDH-sha384kdf-scheme" */
      940,    /* "dhSinglePass-stdDH-sha512kdf-scheme" */
      920,    /* "dhpublicnumber" */
-    1260,    /* "dilithium2" */
-    1263,    /* "dilithium3" */
-    1264,    /* "dilithium4" */
+    1226,    /* "dilithium2" */
+    1229,    /* "dilithium3" */
+    1230,    /* "dilithium4" */
      382,    /* "directory" */
      887,    /* "distinguishedName" */
      892,    /* "dmdName" */
@@ -2838,7 +2800,6 @@ static const unsigned int sn_objs[NUM_SN] = {
     1128,    /* "ffdhe4096" */
     1129,    /* "ffdhe6144" */
     1130,    /* "ffdhe8192" */
-    1217,    /* "firesaber" */
      857,    /* "freshestCRL" */
      453,    /* "friendlyCountry" */
      490,    /* "friendlyCountryName" */
@@ -3211,12 +3172,11 @@ static const unsigned int sn_objs[NUM_SN] = {
      956,    /* "jurisdictionST" */
      150,    /* "keyBag" */
       83,    /* "keyUsage" */
-    1208,    /* "kyber1024" */
-    1206,    /* "kyber512" */
-    1207,    /* "kyber768" */
+    1204,    /* "kyber1024_90s" */
+    1202,    /* "kyber512_90s" */
+    1203,    /* "kyber768_90s" */
      477,    /* "lastModifiedBy" */
      476,    /* "lastModifiedTime" */
-    1215,    /* "lightsaber" */
      157,    /* "localKeyID" */
      480,    /* "mXRecord" */
     1190,    /* "magma-cbc" */
@@ -3251,8 +3211,6 @@ static const unsigned int sn_objs[NUM_SN] = {
      481,    /* "nSRecord" */
      173,    /* "name" */
      666,    /* "nameConstraints" */
-    1210,    /* "newhope1024cca" */
-    1209,    /* "newhope512cca" */
      369,    /* "noCheck" */
      403,    /* "noRevAvail" */
       72,    /* "nsBaseUrl" */
@@ -3267,56 +3225,35 @@ static const unsigned int sn_objs[NUM_SN] = {
       73,    /* "nsRevocationUrl" */
      139,    /* "nsSGC" */
       77,    /* "nsSslServerName" */
-    1211,    /* "ntru_hps2048509" */
-    1212,    /* "ntru_hps2048677" */
-    1213,    /* "ntru_hps4096821" */
-    1214,    /* "ntru_hrss701" */
      681,    /* "onBasis" */
     1195,    /* "oqs_kem_default" */
-    1257,    /* "oqs_sig_default" */
+    1223,    /* "oqs_sig_default" */
     1089,    /* "organizationIdentifier" */
      491,    /* "organizationalStatus" */
     1141,    /* "oscca" */
      475,    /* "otherMailbox" */
      876,    /* "owner" */
-    1233,    /* "p256_bike1l1cpa" */
-    1235,    /* "p256_bike1l1fo" */
-    1234,    /* "p256_bike1l3cpa" */
-    1236,    /* "p256_bike1l3fo" */
-    1261,    /* "p256_dilithium2" */
-    1248,    /* "p256_firesaber" */
-    1231,    /* "p256_frodo1344aes" */
-    1232,    /* "p256_frodo1344shake" */
-    1227,    /* "p256_frodo640aes" */
-    1228,    /* "p256_frodo640shake" */
-    1229,    /* "p256_frodo976aes" */
-    1230,    /* "p256_frodo976shake" */
-    1239,    /* "p256_kyber1024" */
-    1237,    /* "p256_kyber512" */
-    1238,    /* "p256_kyber768" */
-    1246,    /* "p256_lightsaber" */
-    1241,    /* "p256_newhope1024cca" */
-    1240,    /* "p256_newhope512cca" */
-    1242,    /* "p256_ntru_hps2048509" */
-    1243,    /* "p256_ntru_hps2048677" */
-    1244,    /* "p256_ntru_hps4096821" */
-    1245,    /* "p256_ntru_hrss701" */
-    1226,    /* "p256_oqs_kem_default" */
-    1258,    /* "p256_oqs_sig_default" */
-    1270,    /* "p256_picnic2l1fs" */
-    1267,    /* "p256_picnicl1fs" */
-    1273,    /* "p256_qteslapi" */
-    1247,    /* "p256_saber" */
-    1249,    /* "p256_sidhp434" */
-    1250,    /* "p256_sidhp503" */
-    1251,    /* "p256_sidhp610" */
-    1252,    /* "p256_sidhp751" */
-    1253,    /* "p256_sikep434" */
-    1254,    /* "p256_sikep503" */
-    1255,    /* "p256_sikep610" */
-    1256,    /* "p256_sikep751" */
-    1265,    /* "p384_dilithium4" */
-    1276,    /* "p384_qteslapiii" */
+    1227,    /* "p256_dilithium2" */
+    1214,    /* "p256_frodo1344aes" */
+    1215,    /* "p256_frodo1344shake" */
+    1210,    /* "p256_frodo640aes" */
+    1211,    /* "p256_frodo640shake" */
+    1212,    /* "p256_frodo976aes" */
+    1213,    /* "p256_frodo976shake" */
+    1218,    /* "p256_kyber1024_90s" */
+    1216,    /* "p256_kyber512_90s" */
+    1217,    /* "p256_kyber768_90s" */
+    1209,    /* "p256_oqs_kem_default" */
+    1224,    /* "p256_oqs_sig_default" */
+    1236,    /* "p256_picnic2l1fs" */
+    1233,    /* "p256_picnicl1fs" */
+    1239,    /* "p256_qteslapi" */
+    1219,    /* "p256_sikep434" */
+    1220,    /* "p256_sikep503" */
+    1221,    /* "p256_sikep610" */
+    1222,    /* "p256_sikep751" */
+    1231,    /* "p384_dilithium4" */
+    1242,    /* "p384_qteslapiii" */
      489,    /* "pagerTelephoneNumber" */
      374,    /* "path" */
      112,    /* "pbeWithMD5AndCast5CBC" */
@@ -3324,8 +3261,8 @@ static const unsigned int sn_objs[NUM_SN] = {
      487,    /* "personalTitle" */
      464,    /* "photo" */
      863,    /* "physicalDeliveryOfficeName" */
-    1269,    /* "picnic2l1fs" */
-    1266,    /* "picnicl1fs" */
+    1235,    /* "picnic2l1fs" */
+    1232,    /* "picnicl1fs" */
      437,    /* "pilot" */
      439,    /* "pilotAttributeSyntax" */
      438,    /* "pilotAttributeType" */
@@ -3375,8 +3312,8 @@ static const unsigned int sn_objs[NUM_SN] = {
      510,    /* "pseudonym" */
      435,    /* "pss" */
      286,    /* "qcStatements" */
-    1272,    /* "qteslapi" */
-    1275,    /* "qteslapiii" */
+    1238,    /* "qteslapi" */
+    1241,    /* "qteslapiii" */
      457,    /* "qualityLabelledData" */
      450,    /* "rFC822localPart" */
      870,    /* "registeredAddress" */
@@ -3384,17 +3321,16 @@ static const unsigned int sn_objs[NUM_SN] = {
      877,    /* "roleOccupant" */
      448,    /* "room" */
      463,    /* "roomNumber" */
-    1262,    /* "rsa3072_dilithium2" */
-    1259,    /* "rsa3072_oqs_sig_default" */
-    1271,    /* "rsa3072_picnic2l1fs" */
-    1268,    /* "rsa3072_picnicl1fs" */
-    1274,    /* "rsa3072_qteslapi" */
+    1228,    /* "rsa3072_dilithium2" */
+    1225,    /* "rsa3072_oqs_sig_default" */
+    1237,    /* "rsa3072_picnic2l1fs" */
+    1234,    /* "rsa3072_picnicl1fs" */
+    1240,    /* "rsa3072_qteslapi" */
        6,    /* "rsaEncryption" */
      644,    /* "rsaOAEPEncryptionSET" */
      377,    /* "rsaSignature" */
        1,    /* "rsadsi" */
      482,    /* "sOARecord" */
-    1216,    /* "saber" */
      155,    /* "safeContentsBag" */
      291,    /* "sbgp-autonomousSysNum" */
      290,    /* "sbgp-ipAddrBlock" */
@@ -3576,15 +3512,11 @@ static const unsigned int sn_objs[NUM_SN] = {
      604,    /* "setext-pinAny" */
      603,    /* "setext-pinSecure" */
      605,    /* "setext-track2" */
-    1218,    /* "sidhp434" */
-    1219,    /* "sidhp503" */
-    1220,    /* "sidhp610" */
-    1221,    /* "sidhp751" */
       52,    /* "signingTime" */
-    1222,    /* "sikep434" */
-    1223,    /* "sikep503" */
-    1224,    /* "sikep610" */
-    1225,    /* "sikep751" */
+    1205,    /* "sikep434" */
+    1206,    /* "sikep503" */
+    1207,    /* "sikep610" */
+    1208,    /* "sikep751" */
      454,    /* "simpleSecurityObject" */
      496,    /* "singleLevelQuality" */
     1142,    /* "sm-scheme" */
@@ -3651,7 +3583,7 @@ static const unsigned int sn_objs[NUM_SN] = {
     1093,    /* "x509ExtAdmission" */
 };
 
-#define NUM_LN 1268
+#define NUM_LN 1234
 static const unsigned int ln_objs[NUM_LN] = {
      363,    /* "AD Time Stamping" */
      405,    /* "ANSI X9.62" */
@@ -3949,10 +3881,6 @@ static const unsigned int ln_objs[NUM_LN] = {
       93,    /* "bf-cfb" */
       92,    /* "bf-ecb" */
       94,    /* "bf-ofb" */
-    1202,    /* "bike1l1cpa" */
-    1204,    /* "bike1l1fo" */
-    1203,    /* "bike1l3cpa" */
-    1205,    /* "bike1l3fo" */
     1056,    /* "blake2b512" */
     1057,    /* "blake2s256" */
      921,    /* "brainpoolP160r1" */
@@ -4089,9 +4017,9 @@ static const unsigned int ln_objs[NUM_LN] = {
      938,    /* "dhSinglePass-stdDH-sha256kdf-scheme" */
      939,    /* "dhSinglePass-stdDH-sha384kdf-scheme" */
      940,    /* "dhSinglePass-stdDH-sha512kdf-scheme" */
-    1260,    /* "dilithium2" */
-    1263,    /* "dilithium3" */
-    1264,    /* "dilithium4" */
+    1226,    /* "dilithium2" */
+    1229,    /* "dilithium3" */
+    1230,    /* "dilithium4" */
       11,    /* "directory services (X.500)" */
      378,    /* "directory services - algorithms" */
      887,    /* "distinguishedName" */
@@ -4145,7 +4073,6 @@ static const unsigned int ln_objs[NUM_LN] = {
     1128,    /* "ffdhe4096" */
     1129,    /* "ffdhe6144" */
     1130,    /* "ffdhe8192" */
-    1217,    /* "firesaber" */
      453,    /* "friendlyCountry" */
      490,    /* "friendlyCountryName" */
      156,    /* "friendlyName" */
@@ -4470,12 +4397,11 @@ static const unsigned int ln_objs[NUM_LN] = {
     1037,    /* "kx-rsa" */
     1042,    /* "kx-rsa-psk" */
     1044,    /* "kx-srp" */
-    1208,    /* "kyber1024" */
-    1206,    /* "kyber512" */
-    1207,    /* "kyber768" */
+    1204,    /* "kyber1024_90s" */
+    1202,    /* "kyber512_90s" */
+    1203,    /* "kyber768_90s" */
      477,    /* "lastModifiedBy" */
      476,    /* "lastModifiedTime" */
-    1215,    /* "lightsaber" */
      157,    /* "localKeyID" */
       15,    /* "localityName" */
      480,    /* "mXRecord" */
@@ -4507,15 +4433,9 @@ static const unsigned int ln_objs[NUM_LN] = {
      488,    /* "mobileTelephoneNumber" */
      481,    /* "nSRecord" */
      173,    /* "name" */
-    1210,    /* "newhope1024cca" */
-    1209,    /* "newhope512cca" */
-    1211,    /* "ntru_hps2048509" */
-    1212,    /* "ntru_hps2048677" */
-    1213,    /* "ntru_hps4096821" */
-    1214,    /* "ntru_hrss701" */
      681,    /* "onBasis" */
     1195,    /* "oqs_kem_default" */
-    1257,    /* "oqs_sig_default" */
+    1223,    /* "oqs_sig_default" */
      379,    /* "org" */
     1089,    /* "organizationIdentifier" */
       17,    /* "organizationName" */
@@ -4524,44 +4444,27 @@ static const unsigned int ln_objs[NUM_LN] = {
     1141,    /* "oscca" */
      475,    /* "otherMailbox" */
      876,    /* "owner" */
-    1233,    /* "p256_bike1l1cpa" */
-    1235,    /* "p256_bike1l1fo" */
-    1234,    /* "p256_bike1l3cpa" */
-    1236,    /* "p256_bike1l3fo" */
-    1261,    /* "p256_dilithium2" */
-    1248,    /* "p256_firesaber" */
-    1231,    /* "p256_frodo1344aes" */
-    1232,    /* "p256_frodo1344shake" */
-    1227,    /* "p256_frodo640aes" */
-    1228,    /* "p256_frodo640shake" */
-    1229,    /* "p256_frodo976aes" */
-    1230,    /* "p256_frodo976shake" */
-    1239,    /* "p256_kyber1024" */
-    1237,    /* "p256_kyber512" */
-    1238,    /* "p256_kyber768" */
-    1246,    /* "p256_lightsaber" */
-    1241,    /* "p256_newhope1024cca" */
-    1240,    /* "p256_newhope512cca" */
-    1242,    /* "p256_ntru_hps2048509" */
-    1243,    /* "p256_ntru_hps2048677" */
-    1244,    /* "p256_ntru_hps4096821" */
-    1245,    /* "p256_ntru_hrss701" */
-    1226,    /* "p256_oqs_kem_default" */
-    1258,    /* "p256_oqs_sig_default" */
-    1270,    /* "p256_picnic2l1fs" */
-    1267,    /* "p256_picnicl1fs" */
-    1273,    /* "p256_qteslapi" */
-    1247,    /* "p256_saber" */
-    1249,    /* "p256_sidhp434" */
-    1250,    /* "p256_sidhp503" */
-    1251,    /* "p256_sidhp610" */
-    1252,    /* "p256_sidhp751" */
-    1253,    /* "p256_sikep434" */
-    1254,    /* "p256_sikep503" */
-    1255,    /* "p256_sikep610" */
-    1256,    /* "p256_sikep751" */
-    1265,    /* "p384_dilithium4" */
-    1276,    /* "p384_qteslapiii" */
+    1227,    /* "p256_dilithium2" */
+    1214,    /* "p256_frodo1344aes" */
+    1215,    /* "p256_frodo1344shake" */
+    1210,    /* "p256_frodo640aes" */
+    1211,    /* "p256_frodo640shake" */
+    1212,    /* "p256_frodo976aes" */
+    1213,    /* "p256_frodo976shake" */
+    1218,    /* "p256_kyber1024_90s" */
+    1216,    /* "p256_kyber512_90s" */
+    1217,    /* "p256_kyber768_90s" */
+    1209,    /* "p256_oqs_kem_default" */
+    1224,    /* "p256_oqs_sig_default" */
+    1236,    /* "p256_picnic2l1fs" */
+    1233,    /* "p256_picnicl1fs" */
+    1239,    /* "p256_qteslapi" */
+    1219,    /* "p256_sikep434" */
+    1220,    /* "p256_sikep503" */
+    1221,    /* "p256_sikep610" */
+    1222,    /* "p256_sikep751" */
+    1231,    /* "p384_dilithium4" */
+    1242,    /* "p384_qteslapiii" */
      935,    /* "pSpecified" */
      489,    /* "pagerTelephoneNumber" */
      782,    /* "password based MAC" */
@@ -4584,8 +4487,8 @@ static const unsigned int ln_objs[NUM_LN] = {
      487,    /* "personalTitle" */
      464,    /* "photo" */
      863,    /* "physicalDeliveryOfficeName" */
-    1269,    /* "picnic2l1fs" */
-    1266,    /* "picnicl1fs" */
+    1235,    /* "picnic2l1fs" */
+    1232,    /* "picnicl1fs" */
      437,    /* "pilot" */
      439,    /* "pilotAttributeSyntax" */
      438,    /* "pilotAttributeType" */
@@ -4627,8 +4530,8 @@ static const unsigned int ln_objs[NUM_LN] = {
      510,    /* "pseudonym" */
      435,    /* "pss" */
      286,    /* "qcStatements" */
-    1272,    /* "qteslapi" */
-    1275,    /* "qteslapiii" */
+    1238,    /* "qteslapi" */
+    1241,    /* "qteslapiii" */
      457,    /* "qualityLabelledData" */
      450,    /* "rFC822localPart" */
       98,    /* "rc2-40-cbc" */
@@ -4653,18 +4556,17 @@ static const unsigned int ln_objs[NUM_LN] = {
      448,    /* "room" */
      463,    /* "roomNumber" */
       19,    /* "rsa" */
-    1262,    /* "rsa3072_dilithium2" */
-    1259,    /* "rsa3072_oqs_sig_default" */
-    1271,    /* "rsa3072_picnic2l1fs" */
-    1268,    /* "rsa3072_picnicl1fs" */
-    1274,    /* "rsa3072_qteslapi" */
+    1228,    /* "rsa3072_dilithium2" */
+    1225,    /* "rsa3072_oqs_sig_default" */
+    1237,    /* "rsa3072_picnic2l1fs" */
+    1234,    /* "rsa3072_picnicl1fs" */
+    1240,    /* "rsa3072_qteslapi" */
        6,    /* "rsaEncryption" */
      644,    /* "rsaOAEPEncryptionSET" */
      377,    /* "rsaSignature" */
      919,    /* "rsaesOaep" */
      912,    /* "rsassaPss" */
      482,    /* "sOARecord" */
-    1216,    /* "saber" */
      155,    /* "safeContentsBag" */
      291,    /* "sbgp-autonomousSysNum" */
      290,    /* "sbgp-ipAddrBlock" */
@@ -4852,15 +4754,11 @@ static const unsigned int ln_objs[NUM_LN] = {
       42,    /* "shaWithRSAEncryption" */
     1100,    /* "shake128" */
     1101,    /* "shake256" */
-    1218,    /* "sidhp434" */
-    1219,    /* "sidhp503" */
-    1220,    /* "sidhp610" */
-    1221,    /* "sidhp751" */
       52,    /* "signingTime" */
-    1222,    /* "sikep434" */
-    1223,    /* "sikep503" */
-    1224,    /* "sikep610" */
-    1225,    /* "sikep751" */
+    1205,    /* "sikep434" */
+    1206,    /* "sikep503" */
+    1207,    /* "sikep610" */
+    1208,    /* "sikep751" */
      454,    /* "simpleSecurityObject" */
      496,    /* "singleLevelQuality" */
     1062,    /* "siphash" */
@@ -5231,15 +5129,15 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      732,    /* OBJ_sect409r1                    1 3 132 0 37 */
      733,    /* OBJ_sect571k1                    1 3 132 0 38 */
      734,    /* OBJ_sect571r1                    1 3 132 0 39 */
-    1257,    /* OBJ_oqs_sig_default              1 3 9999 1 1 */
-    1258,    /* OBJ_p256_oqs_sig_default         1 3 9999 1 2 */
-    1259,    /* OBJ_rsa3072_oqs_sig_default      1 3 9999 1 3 */
-    1260,    /* OBJ_dilithium2                   1 3 9999 2 1 */
-    1261,    /* OBJ_p256_dilithium2              1 3 9999 2 2 */
-    1262,    /* OBJ_rsa3072_dilithium2           1 3 9999 2 3 */
-    1263,    /* OBJ_dilithium3                   1 3 9999 2 4 */
-    1264,    /* OBJ_dilithium4                   1 3 9999 2 5 */
-    1265,    /* OBJ_p384_dilithium4              1 3 9999 2 6 */
+    1223,    /* OBJ_oqs_sig_default              1 3 9999 1 1 */
+    1224,    /* OBJ_p256_oqs_sig_default         1 3 9999 1 2 */
+    1225,    /* OBJ_rsa3072_oqs_sig_default      1 3 9999 1 3 */
+    1226,    /* OBJ_dilithium2                   1 3 9999 2 1 */
+    1227,    /* OBJ_p256_dilithium2              1 3 9999 2 2 */
+    1228,    /* OBJ_rsa3072_dilithium2           1 3 9999 2 3 */
+    1229,    /* OBJ_dilithium3                   1 3 9999 2 4 */
+    1230,    /* OBJ_dilithium4                   1 3 9999 2 5 */
+    1231,    /* OBJ_p384_dilithium4              1 3 9999 2 6 */
      624,    /* OBJ_set_rootKeyThumb             2 23 42 3 0 0 */
      625,    /* OBJ_set_addPolicy                2 23 42 3 0 1 */
      626,    /* OBJ_setAttr_Token_EMV            2 23 42 3 2 1 */
@@ -5992,17 +5890,17 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      955,    /* OBJ_jurisdictionLocalityName     1 3 6 1 4 1 311 60 2 1 1 */
      956,    /* OBJ_jurisdictionStateOrProvinceName 1 3 6 1 4 1 311 60 2 1 2 */
      957,    /* OBJ_jurisdictionCountryName      1 3 6 1 4 1 311 60 2 1 3 */
-    1266,    /* OBJ_picnicl1fs                   1 3 6 1 4 1 311 89 2 1 1 */
-    1267,    /* OBJ_p256_picnicl1fs              1 3 6 1 4 1 311 89 2 1 2 */
-    1268,    /* OBJ_rsa3072_picnicl1fs           1 3 6 1 4 1 311 89 2 1 3 */
-    1269,    /* OBJ_picnic2l1fs                  1 3 6 1 4 1 311 89 2 1 11 */
-    1270,    /* OBJ_p256_picnic2l1fs             1 3 6 1 4 1 311 89 2 1 12 */
-    1271,    /* OBJ_rsa3072_picnic2l1fs          1 3 6 1 4 1 311 89 2 1 13 */
-    1272,    /* OBJ_qteslapi                     1 3 6 1 4 1 311 89 2 2 10 */
-    1273,    /* OBJ_p256_qteslapi                1 3 6 1 4 1 311 89 2 2 11 */
-    1274,    /* OBJ_rsa3072_qteslapi             1 3 6 1 4 1 311 89 2 2 12 */
-    1275,    /* OBJ_qteslapiii                   1 3 6 1 4 1 311 89 2 2 20 */
-    1276,    /* OBJ_p384_qteslapiii              1 3 6 1 4 1 311 89 2 2 21 */
+    1232,    /* OBJ_picnicl1fs                   1 3 6 1 4 1 311 89 2 1 1 */
+    1233,    /* OBJ_p256_picnicl1fs              1 3 6 1 4 1 311 89 2 1 2 */
+    1234,    /* OBJ_rsa3072_picnicl1fs           1 3 6 1 4 1 311 89 2 1 3 */
+    1235,    /* OBJ_picnic2l1fs                  1 3 6 1 4 1 311 89 2 1 11 */
+    1236,    /* OBJ_p256_picnic2l1fs             1 3 6 1 4 1 311 89 2 1 12 */
+    1237,    /* OBJ_rsa3072_picnic2l1fs          1 3 6 1 4 1 311 89 2 1 13 */
+    1238,    /* OBJ_qteslapi                     1 3 6 1 4 1 311 89 2 2 10 */
+    1239,    /* OBJ_p256_qteslapi                1 3 6 1 4 1 311 89 2 2 11 */
+    1240,    /* OBJ_rsa3072_qteslapi             1 3 6 1 4 1 311 89 2 2 12 */
+    1241,    /* OBJ_qteslapiii                   1 3 6 1 4 1 311 89 2 2 20 */
+    1242,    /* OBJ_p384_qteslapiii              1 3 6 1 4 1 311 89 2 2 21 */
     1056,    /* OBJ_blake2b512                   1 3 6 1 4 1 1722 12 2 1 16 */
     1057,    /* OBJ_blake2s256                   1 3 6 1 4 1 1722 12 2 2 8 */
     1159,    /* OBJ_dstu4145be                   1 2 804 2 1 1 1 1 3 1 1 1 1 */

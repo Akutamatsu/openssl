@@ -182,26 +182,9 @@ static const TLS_GROUP_INFO oqs_nid_list[] = {
     {NID_frodo976shake, 192, TLS_CURVE_CUSTOM}, /* frodo976shake (0x0203) */
     {NID_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* frodo1344aes (0x0204) */
     {NID_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* frodo1344shake (0x0205) */
-    {NID_bike1l1cpa, 128, TLS_CURVE_CUSTOM}, /* bike1l1cpa (0x0206) */
-    {NID_bike1l3cpa, 192, TLS_CURVE_CUSTOM}, /* bike1l3cpa (0x0207) */
-    {NID_bike1l1fo, 128, TLS_CURVE_CUSTOM}, /* bike1l1fo (0x0223) */
-    {NID_bike1l3fo, 192, TLS_CURVE_CUSTOM}, /* bike1l3fo (0x0224) */
-    {NID_kyber512, 128, TLS_CURVE_CUSTOM}, /* kyber512 (0x020F) */
-    {NID_kyber768, 192, TLS_CURVE_CUSTOM}, /* kyber768 (0x0210) */
-    {NID_kyber1024, 256, TLS_CURVE_CUSTOM}, /* kyber1024 (0x0211) */
-    {NID_newhope512cca, 128, TLS_CURVE_CUSTOM}, /* newhope512cca (0x0212) */
-    {NID_newhope1024cca, 256, TLS_CURVE_CUSTOM}, /* newhope1024cca (0x0213) */
-    {NID_ntru_hps2048509, 128, TLS_CURVE_CUSTOM}, /* ntru_hps2048509 (0x0214) */
-    {NID_ntru_hps2048677, 192, TLS_CURVE_CUSTOM}, /* ntru_hps2048677 (0x0215) */
-    {NID_ntru_hps4096821, 256, TLS_CURVE_CUSTOM}, /* ntru_hps4096821 (0x0216) */
-    {NID_ntru_hrss701, 192, TLS_CURVE_CUSTOM}, /* ntru_hrss701 (0x0217) */
-    {NID_lightsaber, 128, TLS_CURVE_CUSTOM}, /* lightsaber (0x0218) */
-    {NID_saber, 192, TLS_CURVE_CUSTOM}, /* saber (0x0219) */
-    {NID_firesaber, 256, TLS_CURVE_CUSTOM}, /* firesaber (0x021A) */
-    {NID_sidhp434, 128, TLS_CURVE_CUSTOM}, /* sidhp434 (0x021B) */
-    {NID_sidhp503, 128, TLS_CURVE_CUSTOM}, /* sidhp503 (0x021C) */
-    {NID_sidhp610, 192, TLS_CURVE_CUSTOM}, /* sidhp610 (0x021D) */
-    {NID_sidhp751, 256, TLS_CURVE_CUSTOM}, /* sidhp751 (0x021E) */
+    {NID_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* kyber512_90s (0x020F) */
+    {NID_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* kyber768_90s (0x0210) */
+    {NID_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* kyber1024_90s (0x0211) */
     {NID_sikep434, 128, TLS_CURVE_CUSTOM}, /* sikep434 (0x021F) */
     {NID_sikep503, 128, TLS_CURVE_CUSTOM}, /* sikep503 (0x0220) */
     {NID_sikep610, 192, TLS_CURVE_CUSTOM}, /* sikep610 (0x0221) */
@@ -218,26 +201,9 @@ static const TLS_GROUP_INFO oqs_hybrid_nid_list[] = {
     {NID_p256_frodo976shake, 192, TLS_CURVE_CUSTOM}, /* p256 + frodo976shake hybrid (0x0203) */
     {NID_p256_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344aes hybrid (0x0204) */
     {NID_p256_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344shake hybrid (0x0205) */
-    {NID_p256_bike1l1cpa, 128, TLS_CURVE_CUSTOM}, /* p256 + bike1l1cpa hybrid (0x0206) */
-    {NID_p256_bike1l3cpa, 192, TLS_CURVE_CUSTOM}, /* p256 + bike1l3cpa hybrid (0x0207) */
-    {NID_p256_bike1l1fo, 128, TLS_CURVE_CUSTOM}, /* p256 + bike1l1fo hybrid (0x0223) */
-    {NID_p256_bike1l3fo, 192, TLS_CURVE_CUSTOM}, /* p256 + bike1l3fo hybrid (0x0224) */
-    {NID_p256_kyber512, 128, TLS_CURVE_CUSTOM}, /* p256 + kyber512 hybrid (0x020F) */
-    {NID_p256_kyber768, 192, TLS_CURVE_CUSTOM}, /* p256 + kyber768 hybrid (0x0210) */
-    {NID_p256_kyber1024, 256, TLS_CURVE_CUSTOM}, /* p256 + kyber1024 hybrid (0x0211) */
-    {NID_p256_newhope512cca, 128, TLS_CURVE_CUSTOM}, /* p256 + newhope512cca hybrid (0x0212) */
-    {NID_p256_newhope1024cca, 256, TLS_CURVE_CUSTOM}, /* p256 + newhope1024cca hybrid (0x0213) */
-    {NID_p256_ntru_hps2048509, 128, TLS_CURVE_CUSTOM}, /* p256 + ntru_hps2048509 hybrid (0x0214) */
-    {NID_p256_ntru_hps2048677, 192, TLS_CURVE_CUSTOM}, /* p256 + ntru_hps2048677 hybrid (0x0215) */
-    {NID_p256_ntru_hps4096821, 256, TLS_CURVE_CUSTOM}, /* p256 + ntru_hps4096821 hybrid (0x0216) */
-    {NID_p256_ntru_hrss701, 192, TLS_CURVE_CUSTOM}, /* p256 + ntru_hrss701 hybrid (0x0217) */
-    {NID_p256_lightsaber, 128, TLS_CURVE_CUSTOM}, /* p256 + lightsaber hybrid (0x0218) */
-    {NID_p256_saber, 192, TLS_CURVE_CUSTOM}, /* p256 + saber hybrid (0x0219) */
-    {NID_p256_firesaber, 256, TLS_CURVE_CUSTOM}, /* p256 + firesaber hybrid (0x021A) */
-    {NID_p256_sidhp434, 128, TLS_CURVE_CUSTOM}, /* p256 + sidhp434 hybrid (0x021B) */
-    {NID_p256_sidhp503, 128, TLS_CURVE_CUSTOM}, /* p256 + sidhp503 hybrid (0x021C) */
-    {NID_p256_sidhp610, 192, TLS_CURVE_CUSTOM}, /* p256 + sidhp610 hybrid (0x021D) */
-    {NID_p256_sidhp751, 256, TLS_CURVE_CUSTOM}, /* p256 + sidhp751 hybrid (0x021E) */
+    {NID_p256_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* p256 + kyber512_90s hybrid (0x020F) */
+    {NID_p256_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* p256 + kyber768_90s hybrid (0x0210) */
+    {NID_p256_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* p256 + kyber1024_90s hybrid (0x0211) */
     {NID_p256_sikep434, 128, TLS_CURVE_CUSTOM}, /* p256 + sikep434 hybrid (0x021F) */
     {NID_p256_sikep503, 128, TLS_CURVE_CUSTOM}, /* p256 + sikep503 hybrid (0x0220) */
     {NID_p256_sikep610, 192, TLS_CURVE_CUSTOM}, /* p256 + sikep610 hybrid (0x0221) */
@@ -268,26 +234,9 @@ static const uint16_t eccurves_default[] = {
     0x0203, /* OQS frodo976shake */
     0x0204, /* OQS frodo1344aes */
     0x0205, /* OQS frodo1344shake */
-    0x0206, /* OQS bike1l1cpa */
-    0x0207, /* OQS bike1l3cpa */
-    0x0223, /* OQS bike1l1fo */
-    0x0224, /* OQS bike1l3fo */
-    0x020F, /* OQS kyber512 */
-    0x0210, /* OQS kyber768 */
-    0x0211, /* OQS kyber1024 */
-    0x0212, /* OQS newhope512cca */
-    0x0213, /* OQS newhope1024cca */
-    0x0214, /* OQS ntru_hps2048509 */
-    0x0215, /* OQS ntru_hps2048677 */
-    0x0216, /* OQS ntru_hps4096821 */
-    0x0217, /* OQS ntru_hrss701 */
-    0x0218, /* OQS lightsaber */
-    0x0219, /* OQS saber */
-    0x021A, /* OQS firesaber */
-    0x021B, /* OQS sidhp434 */
-    0x021C, /* OQS sidhp503 */
-    0x021D, /* OQS sidhp610 */
-    0x021E, /* OQS sidhp751 */
+    0x020F, /* OQS kyber512_90s */
+    0x0210, /* OQS kyber768_90s */
+    0x0211, /* OQS kyber1024_90s */
     0x021F, /* OQS sikep434 */
     0x0220, /* OQS sikep503 */
     0x0221, /* OQS sikep610 */
@@ -301,26 +250,9 @@ static const uint16_t eccurves_default[] = {
     0x0303, /* p256 - OQS frodo976shake hybrid */
     0x0304, /* p256 - OQS frodo1344aes hybrid */
     0x0305, /* p256 - OQS frodo1344shake hybrid */
-    0x0306, /* p256 - OQS bike1l1cpa hybrid */
-    0x0307, /* p256 - OQS bike1l3cpa hybrid */
-    0x0323, /* p256 - OQS bike1l1fo hybrid */
-    0x0324, /* p256 - OQS bike1l3fo hybrid */
-    0x030F, /* p256 - OQS kyber512 hybrid */
-    0x0310, /* p256 - OQS kyber768 hybrid */
-    0x0311, /* p256 - OQS kyber1024 hybrid */
-    0x0312, /* p256 - OQS newhope512cca hybrid */
-    0x0313, /* p256 - OQS newhope1024cca hybrid */
-    0x0314, /* p256 - OQS ntru_hps2048509 hybrid */
-    0x0315, /* p256 - OQS ntru_hps2048677 hybrid */
-    0x0316, /* p256 - OQS ntru_hps4096821 hybrid */
-    0x0317, /* p256 - OQS ntru_hrss701 hybrid */
-    0x0318, /* p256 - OQS lightsaber hybrid */
-    0x0319, /* p256 - OQS saber hybrid */
-    0x031A, /* p256 - OQS firesaber hybrid */
-    0x031B, /* p256 - OQS sidhp434 hybrid */
-    0x031C, /* p256 - OQS sidhp503 hybrid */
-    0x031D, /* p256 - OQS sidhp610 hybrid */
-    0x031E, /* p256 - OQS sidhp751 hybrid */
+    0x030F, /* p256 - OQS kyber512_90s hybrid */
+    0x0310, /* p256 - OQS kyber768_90s hybrid */
+    0x0311, /* p256 - OQS kyber1024_90s hybrid */
     0x031F, /* p256 - OQS sikep434 hybrid */
     0x0320, /* p256 - OQS sikep503 hybrid */
     0x0321, /* p256 - OQS sikep610 hybrid */
