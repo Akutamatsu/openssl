@@ -445,6 +445,7 @@ static const char* OQS_CURVE_ID_NAME_STR(int id) {
   case 0x0203: return "frodo976shake";
   case 0x0204: return "frodo1344aes";
   case 0x0205: return "frodo1344shake";
+  case 0x020E: return "extrahope512";
   case 0x020F: return "kyber512_90s";
   case 0x0210: return "kyber768_90s";
   case 0x0211: return "kyber1024_90s";
@@ -461,6 +462,7 @@ static const char* OQS_CURVE_ID_NAME_STR(int id) {
   case 0x0303: return "p256_frodo976shake hybrid";
   case 0x0304: return "p256_frodo1344aes hybrid";
   case 0x0305: return "p256_frodo1344shake hybrid";
+  case 0x030E: return "p256_extrahope512 hybrid";
   case 0x030F: return "p256_kyber512_90s hybrid";
   case 0x0310: return "p256_kyber768_90s hybrid";
   case 0x0311: return "p256_kyber1024_90s hybrid";

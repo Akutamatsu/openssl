@@ -1691,6 +1691,8 @@ dstu4145le 2 9 : uacurve9 : DSTU curve 9
  : p256_frodo1344aes : p256_frodo1344aes
  : frodo1344shake : frodo1344shake
  : p256_frodo1344shake : p256_frodo1344shake
+ : extrahope512 : extrahope512
+ : p256_extrahope512 : p256_extrahope512
  : kyber512_90s : kyber512_90s
  : p256_kyber512_90s : p256_kyber512_90s
  : kyber768_90s : kyber768_90s

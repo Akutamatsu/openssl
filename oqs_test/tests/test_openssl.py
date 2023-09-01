@@ -8,9 +8,9 @@ kex_algs_master_111 = [
     'p256_oqs_kem_default',
 ##### OQS_TEMPLATE_FRAGMENT_KEX_ALGS_MASTER_START
     # post-quantum key exchanges
-    'frodo640aes','frodo640shake','frodo976aes','frodo976shake','frodo1344aes','frodo1344shake','kyber512_90s','kyber768_90s','kyber1024_90s','sikep434','sikep503','sikep610','sikep751',
+    'frodo640aes','frodo640shake','frodo976aes','frodo976shake','frodo1344aes','frodo1344shake','extrahope512','kyber512_90s','kyber768_90s','kyber1024_90s','sikep434','sikep503','sikep610','sikep751',
     # post-quantum + classical key exchanges
-    'p256_frodo640aes','p256_frodo640shake','p256_frodo976aes','p256_frodo976shake','p256_frodo1344aes','p256_frodo1344shake','p256_kyber512_90s','p256_kyber768_90s','p256_kyber1024_90s','p256_sikep434','p256_sikep503','p256_sikep610','p256_sikep751',
+    'p256_frodo640aes','p256_frodo640shake','p256_frodo976aes','p256_frodo976shake','p256_frodo1344aes','p256_frodo1344shake','p256_extrahope512','p256_kyber512_90s','p256_kyber768_90s','p256_kyber1024_90s','p256_sikep434','p256_sikep503','p256_sikep610','p256_sikep751',
 ##### OQS_TEMPLATE_FRAGMENT_KEX_ALGS_MASTER_END
     ]
 sig_algs_master_111 = [

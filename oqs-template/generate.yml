@@ -36,6 +36,12 @@ kems:
     oqs_alg: "OQS_KEM_alg_frodokem_1344_shake"
     bit_security: 256
   -
+    name_group: "extrahope512"
+    nid: "0x020E"
+    nid_hybrid_p256: "0x030E"
+    oqs_alg: "OQS_KEM_alg_extrahope_512"
+    bit_security: 128
+  -
     name_group: "kyber512_90s"
     nid: "0x020F"
     nid_hybrid_p256: "0x030F"

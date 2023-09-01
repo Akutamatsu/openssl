@@ -182,6 +182,7 @@ static const TLS_GROUP_INFO oqs_nid_list[] = {
     {NID_frodo976shake, 192, TLS_CURVE_CUSTOM}, /* frodo976shake (0x0203) */
     {NID_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* frodo1344aes (0x0204) */
     {NID_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* frodo1344shake (0x0205) */
+    {NID_extrahope512, 128, TLS_CURVE_CUSTOM}, /* extrahope512 (0x020E) */
     {NID_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* kyber512_90s (0x020F) */
     {NID_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* kyber768_90s (0x0210) */
     {NID_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* kyber1024_90s (0x0211) */
@@ -201,6 +202,7 @@ static const TLS_GROUP_INFO oqs_hybrid_nid_list[] = {
     {NID_p256_frodo976shake, 192, TLS_CURVE_CUSTOM}, /* p256 + frodo976shake hybrid (0x0203) */
     {NID_p256_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344aes hybrid (0x0204) */
     {NID_p256_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344shake hybrid (0x0205) */
+    {NID_p256_extrahope512, 128, TLS_CURVE_CUSTOM}, /* p256 + extrahope512 hybrid (0x020E) */
     {NID_p256_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* p256 + kyber512_90s hybrid (0x020F) */
     {NID_p256_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* p256 + kyber768_90s hybrid (0x0210) */
     {NID_p256_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* p256 + kyber1024_90s hybrid (0x0211) */
@@ -234,6 +236,7 @@ static const uint16_t eccurves_default[] = {
     0x0203, /* OQS frodo976shake */
     0x0204, /* OQS frodo1344aes */
     0x0205, /* OQS frodo1344shake */
+    0x020E, /* OQS extrahope512 */
     0x020F, /* OQS kyber512_90s */
     0x0210, /* OQS kyber768_90s */
     0x0211, /* OQS kyber1024_90s */
@@ -250,6 +253,7 @@ static const uint16_t eccurves_default[] = {
     0x0303, /* p256 - OQS frodo976shake hybrid */
     0x0304, /* p256 - OQS frodo1344aes hybrid */
     0x0305, /* p256 - OQS frodo1344shake hybrid */
+    0x030E, /* p256 - OQS extrahope512 hybrid */
     0x030F, /* p256 - OQS kyber512_90s hybrid */
     0x0310, /* p256 - OQS kyber768_90s hybrid */
     0x0311, /* p256 - OQS kyber1024_90s hybrid */
