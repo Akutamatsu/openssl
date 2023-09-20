@@ -1438,6 +1438,84 @@ static int init_psk_kex_modes(SSL *s, unsigned int context)
     return 1;
 }
 
+int tls_kem_key_confirm(SSL *s, const EVP_MD *md, const unsigned char *msgstart,
+                      size_t binderoffset, const unsigned char *binderin,
+                      unsigned char *binderout, int sign)
+{
+    EVP_PKEY *mackey = NULL;
+    EVP_MD_CTX *mctx = EVP_MD_CTX_new();
+    unsigned char hash[EVP_MAX_MD_SIZE];
+    unsigned char confirmkey[EVP_MAX_MD_SIZE], tmpbinder[EVP_MAX_MD_SIZE];
+    const unsigned char *label;
+    size_t bindersize, labelsize, hashsize;
+    int hashsizei = EVP_MD_size(md);
+    int ret = -1;
+
+    /* Ensure cast to size_t is safe */
+    if (!ossl_assert(hashsizei >= 0)) {
+        SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PSK_DO_BINDER,
+                 ERR_R_INTERNAL_ERROR);
+        goto err;
+    }
+    hashsize = (size_t)hashsizei;
+
+    /** Generate the key-confirmation key: ak */
+    if (!tls13_derive_finishedkey(s, md, s->handshake_secret, confirmkey, hashsize)) {
+        /* SSLfatal() already called */
+        goto err;
+    }
+#if 1
+    if (EVP_DigestUpdate(mctx, msgstart, binderoffset) <= 0
+            || EVP_DigestFinal_ex(mctx, hash, NULL) <= 0) {
+        SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PSK_DO_BINDER,
+                 ERR_R_INTERNAL_ERROR);
+        goto err;
+    }
+#else
+    if (!ssl_handshake_hash(s, hash, sizeof(hash), &hashsize)) {
+        /* SSLfatal() already called */
+        goto err;
+    }
+#endif
+
+    mackey = EVP_PKEY_new_raw_private_key(EVP_PKEY_HMAC, NULL, confirmkey, hashsize);
+    if (mackey == NULL) {
+        SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PSK_DO_BINDER,
+                 ERR_R_INTERNAL_ERROR);
+        goto err;
+    }
+
+    if (!sign)
+        binderout = tmpbinder;
+
+    bindersize = hashsize;
+    if (EVP_DigestSignInit(mctx, NULL, md, NULL, mackey) <= 0
+            || EVP_DigestSignUpdate(mctx, hash, hashsize) <= 0
+            || EVP_DigestSignFinal(mctx, binderout, &bindersize) <= 0
+            || bindersize != hashsize) {
+        SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PSK_DO_BINDER,
+                 ERR_R_INTERNAL_ERROR);
+        goto err;
+    }
+
+    if (sign) {
+        ret = 1;
+    } else { /* for server to check **/
+        /* HMAC keys can't do EVP_DigestVerify* - use CRYPTO_memcmp instead */
+        ret = (CRYPTO_memcmp(binderin, binderout, hashsize) == 0);
+        if (!ret)
+            SSLfatal(s, SSL_AD_ILLEGAL_PARAMETER, SSL_F_TLS_PSK_DO_BINDER,
+                     SSL_R_BINDER_DOES_NOT_VERIFY);
+    }
+
+ err:
+    OPENSSL_cleanse(confirmkey, sizeof(confirmkey));
+    EVP_PKEY_free(mackey);
+    EVP_MD_CTX_free(mctx);
+
+    return ret;
+}
+
 int tls_psk_do_binder(SSL *s, const EVP_MD *md, const unsigned char *msgstart,
                       size_t binderoffset, const unsigned char *binderin,
                       unsigned char *binderout, SSL_SESSION *sess, int sign,

@@ -1745,6 +1745,9 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
     EVP_PKEY *ckey = s->s3->peer_tmp, *skey = NULL;
     int do_pqc = 0; /* 1 if post-quantum alg, 0 otherwise */
     int do_hybrid = 0; /* 1 if post-quantum hybrid alg, 0 otherwise */
+    size_t hashsize = 0, binderoffset, msglen;
+    unsigned char *macout = NULL, *msgstart = NULL;
+    const EVP_MD *handmd = NULL;
 
     if (s->hello_retry_request == SSL_HRR_PENDING) {
       if (ckey != NULL) { /* this is null in OQS, is this ok? (FIXMEOQS) */
@@ -1862,13 +1865,13 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
       {
         /* OQS note: this code is copied from ssl_derive */
           if (!s->hit) {
-            if (!tls13_generate_secret(s, ssl_handshake_md(s), NULL, NULL, 0, (unsigned char *)&s->early_secret)) {
+            if (!tls13_generate_secret(s, ssl_handshake_md(s), NULL, NULL, 0, (unsigned char *)&s->early_secret)) { // (0, 0) --> ES
               SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_CONSTRUCT_STOC_KEY_SHARE, ERR_R_INTERNAL_ERROR);
               has_error = 1;
               goto oqs_cleanup;
             }
           }
-          if (!tls13_generate_handshake_secret(s, shared_secret, shared_secret_len)) {
+          if (!tls13_generate_handshake_secret(s, shared_secret, shared_secret_len)) { // (ES, DHE) --> HS
             SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_CONSTRUCT_STOC_KEY_SHARE, ERR_R_INTERNAL_ERROR);
             has_error = 1;
             goto oqs_cleanup;
@@ -1900,8 +1903,25 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
       encoded_pt_len = classical_encoded_pt_len;
     }
 
+    /* Modification STARTS here: */
+#if 1
+    handmd = ssl_handshake_md(s);
+    hashsize = EVP_MD_size(handmd);
+
     if (!WPACKET_sub_memcpy_u16(pkt, encodedPoint, encoded_pt_len)
-            || !WPACKET_close(pkt)) {
+            || !WPACKET_get_total_written(pkt, &binderoffset)
+            || !WPACKET_start_sub_packet_u16(pkt)
+            || (s->psksession != NULL
+                && !WPACKET_sub_allocate_bytes_u8(pkt, hashsize, &macout))
+            || !WPACKET_close(pkt) // fill in "key_share Length"
+            || !WPACKET_close(pkt) // fill in "binder Length"
+            || !WPACKET_get_total_written(pkt, &msglen)
+               /*
+                * We need to fill in all the sub-packet lengths now so we can
+                * calculate the HMAC of the message up to the binders
+                */
+            || !WPACKET_fill_lengths(pkt)) 
+    {
         SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_CONSTRUCT_STOC_KEY_SHARE,
                  ERR_R_INTERNAL_ERROR);
         EVP_PKEY_free(skey);
@@ -1909,6 +1929,16 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
         return EXT_RETURN_FAIL;
     }
     OPENSSL_free(encodedPoint);
+
+    msgstart = WPACKET_get_curr(pkt) - msglen;
+
+    if (s->psksession != NULL
+            && tls_kem_key_confirm(s, handmd, msgstart, binderoffset, NULL,
+                                 macout, 1) != 1) {
+        /* SSLfatal() already called */
+        return EXT_RETURN_FAIL;
+    }
+#endif // END Modification **/
 
     /* This causes the crypto state to be updated based on the derived keys */
     s->s3->tmp.pkey = skey;
@@ -2120,6 +2150,7 @@ EXT_RETURN tls_construct_stoc_early_data(SSL *s, WPACKET *pkt,
     return EXT_RETURN_SENT;
 }
 
+// original SPSK extension: pskid
 EXT_RETURN tls_construct_stoc_psk(SSL *s, WPACKET *pkt, unsigned int context,
                                   X509 *x, size_t chainidx)
 {
