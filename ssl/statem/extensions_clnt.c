@@ -1850,7 +1850,7 @@ int tls_parse_stoc_key_share(SSL *s, PACKET *pkt, unsigned int context, X509 *x,
 {
 #ifndef OPENSSL_NO_TLS1_3
     unsigned int group_id;
-    PACKET encoded_pt, binder;
+    PACKET encoded_pt, binders, binder;
     unsigned char *classical_encoded_pt = NULL, *oqs_encoded_pt = NULL;
     uint32_t classical_encodedlen, oqs_encodedlen;
     unsigned char *shared_secret = NULL, *oqs_shared_secret = NULL;
@@ -1859,7 +1859,7 @@ int tls_parse_stoc_key_share(SSL *s, PACKET *pkt, unsigned int context, X509 *x,
     int do_pqc = 0;
     int do_hybrid = 0;
     int has_error = 0;
-    size_t binderoffset, hashsize;
+    size_t hashsize;
     const EVP_MD *md = NULL;
 
     /* OQS note: this block has been moved up to learn the group_id sooner */
@@ -2027,11 +2027,17 @@ int tls_parse_stoc_key_share(SSL *s, PACKET *pkt, unsigned int context, X509 *x,
     /* Modification STARTS here: */
 #if 1
     md = ssl_handshake_md(s);
-    binderoffset = PACKET_data(pkt) - (const unsigned char *)s->init_buf->data;
     hashsize = EVP_MD_size(md);
 
-    if (!PACKET_get_length_prefixed_2(pkt, &binder)) {
+    if (!PACKET_get_length_prefixed_2(pkt, &binders)) {
         SSLfatal(s, SSL_AD_DECODE_ERROR, SSL_F_TLS_PARSE_STOC_KEY_SHARE, SSL_R_BAD_EXTENSION);
+        has_error = 1;
+        goto oqs_cleanup;
+    }
+
+    if (!PACKET_get_length_prefixed_1(&binders, &binder)) {
+        SSLfatal(s, SSL_AD_DECODE_ERROR, SSL_F_TLS_PARSE_STOC_KEY_SHARE,
+                    SSL_R_BAD_EXTENSION);
         has_error = 1;
         goto oqs_cleanup;
     }
@@ -2042,8 +2048,8 @@ int tls_parse_stoc_key_share(SSL *s, PACKET *pkt, unsigned int context, X509 *x,
         has_error = 1;
         goto oqs_cleanup;
     }
-    if (tls_kem_key_confirm(s, md, (const unsigned char *)s->init_buf->data,
-                          binderoffset, PACKET_data(&binder), NULL, 0) != 1) {
+    if (tls_kem_key_confirm(s, md, oqs_encoded_pt,
+                          oqs_encodedlen, PACKET_data(&binder), NULL, 0) != 1) {
         /* SSLfatal() already called */
         has_error = 1;
         goto oqs_cleanup;

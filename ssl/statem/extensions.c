@@ -1438,16 +1438,15 @@ static int init_psk_kex_modes(SSL *s, unsigned int context)
     return 1;
 }
 
-int tls_kem_key_confirm(SSL *s, const EVP_MD *md, const unsigned char *msgstart,
-                      size_t binderoffset, const unsigned char *binderin,
+int tls_kem_key_confirm(SSL *s, const EVP_MD *md, const unsigned char *ciphtext,
+                      size_t ciphlen, const unsigned char *binderin,
                       unsigned char *binderout, int sign)
 {
     EVP_PKEY *mackey = NULL;
     EVP_MD_CTX *mctx = EVP_MD_CTX_new();
     unsigned char hash[EVP_MAX_MD_SIZE];
     unsigned char confirmkey[EVP_MAX_MD_SIZE], tmpbinder[EVP_MAX_MD_SIZE];
-    const unsigned char *label;
-    size_t bindersize, labelsize, hashsize;
+    size_t bindersize, hashsize;
     int hashsizei = EVP_MD_size(md);
     int ret = -1;
 
@@ -1465,7 +1464,9 @@ int tls_kem_key_confirm(SSL *s, const EVP_MD *md, const unsigned char *msgstart,
         goto err;
     }
 #if 1
-    if (EVP_DigestUpdate(mctx, msgstart, binderoffset) <= 0
+    if (mctx == NULL
+            || EVP_DigestInit_ex(mctx, md, NULL) <= 0
+            || EVP_DigestUpdate(mctx, ciphtext, ciphlen) <= 0
             || EVP_DigestFinal_ex(mctx, hash, NULL) <= 0) {
         SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PSK_DO_BINDER,
                  ERR_R_INTERNAL_ERROR);

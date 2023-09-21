@@ -1745,7 +1745,7 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
     EVP_PKEY *ckey = s->s3->peer_tmp, *skey = NULL;
     int do_pqc = 0; /* 1 if post-quantum alg, 0 otherwise */
     int do_hybrid = 0; /* 1 if post-quantum hybrid alg, 0 otherwise */
-    size_t hashsize = 0, binderoffset, msglen;
+    size_t hashsize = 0;
     unsigned char *macout = NULL, *msgstart = NULL;
     const EVP_MD *handmd = NULL;
 
@@ -1909,13 +1909,11 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
     hashsize = EVP_MD_size(handmd);
 
     if (!WPACKET_sub_memcpy_u16(pkt, encodedPoint, encoded_pt_len)
-            || !WPACKET_get_total_written(pkt, &binderoffset)
-            || !WPACKET_start_sub_packet_u16(pkt)
-            || (s->psksession != NULL
-                && !WPACKET_sub_allocate_bytes_u8(pkt, hashsize, &macout))
+            ||!WPACKET_start_sub_packet_u16(pkt)
+            //|| (s->psksession != NULL && !WPACKET_sub_allocate_bytes_u8(pkt, hashsize, &macout))
+            || (!WPACKET_sub_allocate_bytes_u8(pkt, hashsize, &macout))
             || !WPACKET_close(pkt) // fill in "key_share Length"
             || !WPACKET_close(pkt) // fill in "binder Length"
-            || !WPACKET_get_total_written(pkt, &msglen)
                /*
                 * We need to fill in all the sub-packet lengths now so we can
                 * calculate the HMAC of the message up to the binders
@@ -1928,16 +1926,14 @@ EXT_RETURN tls_construct_stoc_key_share(SSL *s, WPACKET *pkt,
         OPENSSL_free(encodedPoint);
         return EXT_RETURN_FAIL;
     }
-    OPENSSL_free(encodedPoint);
 
-    msgstart = WPACKET_get_curr(pkt) - msglen;
-
-    if (s->psksession != NULL
-            && tls_kem_key_confirm(s, handmd, msgstart, binderoffset, NULL,
+    if (tls_kem_key_confirm(s, handmd, encodedPoint, encoded_pt_len, NULL,
                                  macout, 1) != 1) {
         /* SSLfatal() already called */
+        OPENSSL_free(encodedPoint);
         return EXT_RETURN_FAIL;
     }
+    OPENSSL_free(encodedPoint);
 #endif // END Modification **/
 
     /* This causes the crypto state to be updated based on the derived keys */
