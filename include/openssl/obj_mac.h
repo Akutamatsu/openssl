@@ -5261,29 +5261,29 @@
 #define LN_p256_extrahope512            "p256_extrahope512"
 #define NID_p256_extrahope512           1217
 
-#define SN_kyber512_90s         "kyber512_90s"
-#define LN_kyber512_90s         "kyber512_90s"
-#define NID_kyber512_90s                1203
+#define SN_kyber512             "kyber512"
+#define LN_kyber512             "kyber512"
+#define NID_kyber512            1203
 
-#define SN_p256_kyber512_90s            "p256_kyber512_90s"
-#define LN_p256_kyber512_90s            "p256_kyber512_90s"
-#define NID_p256_kyber512_90s           1218
+#define SN_p256_kyber512                "p256_kyber512"
+#define LN_p256_kyber512                "p256_kyber512"
+#define NID_p256_kyber512               1218
 
-#define SN_kyber768_90s         "kyber768_90s"
-#define LN_kyber768_90s         "kyber768_90s"
-#define NID_kyber768_90s                1204
+#define SN_kyber768             "kyber768"
+#define LN_kyber768             "kyber768"
+#define NID_kyber768            1204
 
-#define SN_p256_kyber768_90s            "p256_kyber768_90s"
-#define LN_p256_kyber768_90s            "p256_kyber768_90s"
-#define NID_p256_kyber768_90s           1219
+#define SN_p256_kyber768                "p256_kyber768"
+#define LN_p256_kyber768                "p256_kyber768"
+#define NID_p256_kyber768               1219
 
-#define SN_kyber1024_90s                "kyber1024_90s"
-#define LN_kyber1024_90s                "kyber1024_90s"
-#define NID_kyber1024_90s               1205
+#define SN_kyber1024            "kyber1024"
+#define LN_kyber1024            "kyber1024"
+#define NID_kyber1024           1205
 
-#define SN_p256_kyber1024_90s           "p256_kyber1024_90s"
-#define LN_p256_kyber1024_90s           "p256_kyber1024_90s"
-#define NID_p256_kyber1024_90s          1220
+#define SN_p256_kyber1024               "p256_kyber1024"
+#define LN_p256_kyber1024               "p256_kyber1024"
+#define NID_p256_kyber1024              1220
 
 #define SN_sikep434             "sikep434"
 #define LN_sikep434             "sikep434"

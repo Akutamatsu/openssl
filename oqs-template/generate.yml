@@ -42,22 +42,22 @@ kems:
     oqs_alg: "OQS_KEM_alg_extrahope_512"
     bit_security: 128
   -
-    name_group: "kyber512_90s"
+    name_group: "kyber512"
     nid: "0x020F"
     nid_hybrid_p256: "0x030F"
-    oqs_alg: "OQS_KEM_alg_kyber_512_90s"
+    oqs_alg: "OQS_KEM_alg_kyber_512"
     bit_security: 128
   -
-    name_group: "kyber768_90s"
+    name_group: "kyber768"
     nid: "0x0210"
     nid_hybrid_p256: "0x0310"
-    oqs_alg: "OQS_KEM_alg_kyber_768_90s"
+    oqs_alg: "OQS_KEM_alg_kyber_768"
     bit_security: 192
   -
-    name_group: "kyber1024_90s"
+    name_group: "kyber1024"
     nid: "0x0211"
     nid_hybrid_p256: "0x0311"
-    oqs_alg: "OQS_KEM_alg_kyber_1024_90s"
+    oqs_alg: "OQS_KEM_alg_kyber_1024"
     bit_security: 256
   -
     name_group: "sikep434"

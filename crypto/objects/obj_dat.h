@@ -2303,9 +2303,9 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"frodo1344aes", "frodo1344aes", NID_frodo1344aes},
     {"frodo1344shake", "frodo1344shake", NID_frodo1344shake},
     {"extrahope512", "extrahope512", NID_extrahope512},
-    {"kyber512_90s", "kyber512_90s", NID_kyber512_90s},
-    {"kyber768_90s", "kyber768_90s", NID_kyber768_90s},
-    {"kyber1024_90s", "kyber1024_90s", NID_kyber1024_90s},
+    {"kyber512", "kyber512", NID_kyber512},
+    {"kyber768", "kyber768", NID_kyber768},
+    {"kyber1024", "kyber1024", NID_kyber1024},
     {"sikep434", "sikep434", NID_sikep434},
     {"sikep503", "sikep503", NID_sikep503},
     {"sikep610", "sikep610", NID_sikep610},
@@ -2318,9 +2318,9 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"p256_frodo1344aes", "p256_frodo1344aes", NID_p256_frodo1344aes},
     {"p256_frodo1344shake", "p256_frodo1344shake", NID_p256_frodo1344shake},
     {"p256_extrahope512", "p256_extrahope512", NID_p256_extrahope512},
-    {"p256_kyber512_90s", "p256_kyber512_90s", NID_p256_kyber512_90s},
-    {"p256_kyber768_90s", "p256_kyber768_90s", NID_p256_kyber768_90s},
-    {"p256_kyber1024_90s", "p256_kyber1024_90s", NID_p256_kyber1024_90s},
+    {"p256_kyber512", "p256_kyber512", NID_p256_kyber512},
+    {"p256_kyber768", "p256_kyber768", NID_p256_kyber768},
+    {"p256_kyber1024", "p256_kyber1024", NID_p256_kyber1024},
     {"p256_sikep434", "p256_sikep434", NID_p256_sikep434},
     {"p256_sikep503", "p256_sikep503", NID_p256_sikep503},
     {"p256_sikep610", "p256_sikep610", NID_p256_sikep610},
@@ -3175,9 +3175,9 @@ static const unsigned int sn_objs[NUM_SN] = {
      956,    /* "jurisdictionST" */
      150,    /* "keyBag" */
       83,    /* "keyUsage" */
-    1205,    /* "kyber1024_90s" */
-    1203,    /* "kyber512_90s" */
-    1204,    /* "kyber768_90s" */
+    1205,    /* "kyber1024" */
+    1203,    /* "kyber512" */
+    1204,    /* "kyber768" */
      477,    /* "lastModifiedBy" */
      476,    /* "lastModifiedTime" */
      157,    /* "localKeyID" */
@@ -3244,9 +3244,9 @@ static const unsigned int sn_objs[NUM_SN] = {
     1212,    /* "p256_frodo640shake" */
     1213,    /* "p256_frodo976aes" */
     1214,    /* "p256_frodo976shake" */
-    1220,    /* "p256_kyber1024_90s" */
-    1218,    /* "p256_kyber512_90s" */
-    1219,    /* "p256_kyber768_90s" */
+    1220,    /* "p256_kyber1024" */
+    1218,    /* "p256_kyber512" */
+    1219,    /* "p256_kyber768" */
     1210,    /* "p256_oqs_kem_default" */
     1226,    /* "p256_oqs_sig_default" */
     1238,    /* "p256_picnic2l1fs" */
@@ -4402,9 +4402,9 @@ static const unsigned int ln_objs[NUM_LN] = {
     1037,    /* "kx-rsa" */
     1042,    /* "kx-rsa-psk" */
     1044,    /* "kx-srp" */
-    1205,    /* "kyber1024_90s" */
-    1203,    /* "kyber512_90s" */
-    1204,    /* "kyber768_90s" */
+    1205,    /* "kyber1024" */
+    1203,    /* "kyber512" */
+    1204,    /* "kyber768" */
      477,    /* "lastModifiedBy" */
      476,    /* "lastModifiedTime" */
      157,    /* "localKeyID" */
@@ -4457,9 +4457,9 @@ static const unsigned int ln_objs[NUM_LN] = {
     1212,    /* "p256_frodo640shake" */
     1213,    /* "p256_frodo976aes" */
     1214,    /* "p256_frodo976shake" */
-    1220,    /* "p256_kyber1024_90s" */
-    1218,    /* "p256_kyber512_90s" */
-    1219,    /* "p256_kyber768_90s" */
+    1220,    /* "p256_kyber1024" */
+    1218,    /* "p256_kyber512" */
+    1219,    /* "p256_kyber768" */
     1210,    /* "p256_oqs_kem_default" */
     1226,    /* "p256_oqs_sig_default" */
     1238,    /* "p256_picnic2l1fs" */

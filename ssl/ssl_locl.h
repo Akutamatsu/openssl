@@ -490,9 +490,9 @@
   (nid == NID_frodo1344aes ? 0x0204 : \
   (nid == NID_frodo1344shake ? 0x0205 : \
   (nid == NID_extrahope512 ? 0x020E : \
-  (nid == NID_kyber512_90s ? 0x020F : \
-  (nid == NID_kyber768_90s ? 0x0210 : \
-  (nid == NID_kyber1024_90s ? 0x0211 : \
+  (nid == NID_kyber512 ? 0x020F : \
+  (nid == NID_kyber768 ? 0x0210 : \
+  (nid == NID_kyber1024 ? 0x0211 : \
   (nid == NID_sikep434 ? 0x021F : \
   (nid == NID_sikep503 ? 0x0220 : \
   (nid == NID_sikep610 ? 0x0221 : \
@@ -511,9 +511,9 @@
   (nid == NID_p256_frodo1344aes ? 0x0304 : \
   (nid == NID_p256_frodo1344shake ? 0x0305 : \
   (nid == NID_p256_extrahope512 ? 0x030E : \
-  (nid == NID_p256_kyber512_90s ? 0x030F : \
-  (nid == NID_p256_kyber768_90s ? 0x0310 : \
-  (nid == NID_p256_kyber1024_90s ? 0x0311 : \
+  (nid == NID_p256_kyber512 ? 0x030F : \
+  (nid == NID_p256_kyber768 ? 0x0310 : \
+  (nid == NID_p256_kyber1024 ? 0x0311 : \
   (nid == NID_p256_sikep434 ? 0x031F : \
   (nid == NID_p256_sikep503 ? 0x0320 : \
   (nid == NID_p256_sikep610 ? 0x0321 : \
@@ -533,9 +533,9 @@
   (curveID == 0x0204 || curveID == 0x0304 ? NID_frodo1344aes : \
   (curveID == 0x0205 || curveID == 0x0305 ? NID_frodo1344shake : \
   (curveID == 0x020E || curveID == 0x030E ? NID_extrahope512 : \
-  (curveID == 0x020F || curveID == 0x030F ? NID_kyber512_90s : \
-  (curveID == 0x0210 || curveID == 0x0310 ? NID_kyber768_90s : \
-  (curveID == 0x0211 || curveID == 0x0311 ? NID_kyber1024_90s : \
+  (curveID == 0x020F || curveID == 0x030F ? NID_kyber512 : \
+  (curveID == 0x0210 || curveID == 0x0310 ? NID_kyber768 : \
+  (curveID == 0x0211 || curveID == 0x0311 ? NID_kyber1024 : \
   (curveID == 0x021F || curveID == 0x031F ? NID_sikep434 : \
   (curveID == 0x0220 || curveID == 0x0320 ? NID_sikep503 : \
   (curveID == 0x0221 || curveID == 0x0321 ? NID_sikep610 : \
@@ -555,9 +555,9 @@
   (curveID == 0x0304 ? NID_p256_frodo1344aes : \
   (curveID == 0x0305 ? NID_p256_frodo1344shake : \
   (curveID == 0x030E ? NID_p256_extrahope512 : \
-  (curveID == 0x030F ? NID_p256_kyber512_90s : \
-  (curveID == 0x0310 ? NID_p256_kyber768_90s : \
-  (curveID == 0x0311 ? NID_p256_kyber1024_90s : \
+  (curveID == 0x030F ? NID_p256_kyber512 : \
+  (curveID == 0x0310 ? NID_p256_kyber768 : \
+  (curveID == 0x0311 ? NID_p256_kyber1024 : \
   (curveID == 0x031F ? NID_p256_sikep434 : \
   (curveID == 0x0320 ? NID_p256_sikep503 : \
   (curveID == 0x0321 ? NID_p256_sikep610 : \
@@ -583,9 +583,9 @@
   (nid == NID_frodo1344aes ? OQS_KEM_alg_frodokem_1344_aes : \
   (nid == NID_frodo1344shake ? OQS_KEM_alg_frodokem_1344_shake : \
   (nid == NID_extrahope512 ? OQS_KEM_alg_extrahope_512 : \
-  (nid == NID_kyber512_90s ? OQS_KEM_alg_kyber_512_90s : \
-  (nid == NID_kyber768_90s ? OQS_KEM_alg_kyber_768_90s : \
-  (nid == NID_kyber1024_90s ? OQS_KEM_alg_kyber_1024_90s : \
+  (nid == NID_kyber512 ? OQS_KEM_alg_kyber_512 : \
+  (nid == NID_kyber768 ? OQS_KEM_alg_kyber_768 : \
+  (nid == NID_kyber1024 ? OQS_KEM_alg_kyber_1024 : \
   (nid == NID_sikep434 ? OQS_KEM_alg_sike_p434 : \
   (nid == NID_sikep503 ? OQS_KEM_alg_sike_p503 : \
   (nid == NID_sikep610 ? OQS_KEM_alg_sike_p610 : \

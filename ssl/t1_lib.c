@@ -183,9 +183,9 @@ static const TLS_GROUP_INFO oqs_nid_list[] = {
     {NID_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* frodo1344aes (0x0204) */
     {NID_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* frodo1344shake (0x0205) */
     {NID_extrahope512, 128, TLS_CURVE_CUSTOM}, /* extrahope512 (0x020E) */
-    {NID_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* kyber512_90s (0x020F) */
-    {NID_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* kyber768_90s (0x0210) */
-    {NID_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* kyber1024_90s (0x0211) */
+    {NID_kyber512, 128, TLS_CURVE_CUSTOM}, /* kyber512 (0x020F) */
+    {NID_kyber768, 192, TLS_CURVE_CUSTOM}, /* kyber768 (0x0210) */
+    {NID_kyber1024, 256, TLS_CURVE_CUSTOM}, /* kyber1024 (0x0211) */
     {NID_sikep434, 128, TLS_CURVE_CUSTOM}, /* sikep434 (0x021F) */
     {NID_sikep503, 128, TLS_CURVE_CUSTOM}, /* sikep503 (0x0220) */
     {NID_sikep610, 192, TLS_CURVE_CUSTOM}, /* sikep610 (0x0221) */
@@ -203,9 +203,9 @@ static const TLS_GROUP_INFO oqs_hybrid_nid_list[] = {
     {NID_p256_frodo1344aes, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344aes hybrid (0x0204) */
     {NID_p256_frodo1344shake, 256, TLS_CURVE_CUSTOM}, /* p256 + frodo1344shake hybrid (0x0205) */
     {NID_p256_extrahope512, 128, TLS_CURVE_CUSTOM}, /* p256 + extrahope512 hybrid (0x020E) */
-    {NID_p256_kyber512_90s, 128, TLS_CURVE_CUSTOM}, /* p256 + kyber512_90s hybrid (0x020F) */
-    {NID_p256_kyber768_90s, 192, TLS_CURVE_CUSTOM}, /* p256 + kyber768_90s hybrid (0x0210) */
-    {NID_p256_kyber1024_90s, 256, TLS_CURVE_CUSTOM}, /* p256 + kyber1024_90s hybrid (0x0211) */
+    {NID_p256_kyber512, 128, TLS_CURVE_CUSTOM}, /* p256 + kyber512 hybrid (0x020F) */
+    {NID_p256_kyber768, 192, TLS_CURVE_CUSTOM}, /* p256 + kyber768 hybrid (0x0210) */
+    {NID_p256_kyber1024, 256, TLS_CURVE_CUSTOM}, /* p256 + kyber1024 hybrid (0x0211) */
     {NID_p256_sikep434, 128, TLS_CURVE_CUSTOM}, /* p256 + sikep434 hybrid (0x021F) */
     {NID_p256_sikep503, 128, TLS_CURVE_CUSTOM}, /* p256 + sikep503 hybrid (0x0220) */
     {NID_p256_sikep610, 192, TLS_CURVE_CUSTOM}, /* p256 + sikep610 hybrid (0x0221) */
@@ -237,9 +237,9 @@ static const uint16_t eccurves_default[] = {
     0x0204, /* OQS frodo1344aes */
     0x0205, /* OQS frodo1344shake */
     0x020E, /* OQS extrahope512 */
-    0x020F, /* OQS kyber512_90s */
-    0x0210, /* OQS kyber768_90s */
-    0x0211, /* OQS kyber1024_90s */
+    0x020F, /* OQS kyber512 */
+    0x0210, /* OQS kyber768 */
+    0x0211, /* OQS kyber1024 */
     0x021F, /* OQS sikep434 */
     0x0220, /* OQS sikep503 */
     0x0221, /* OQS sikep610 */
@@ -254,9 +254,9 @@ static const uint16_t eccurves_default[] = {
     0x0304, /* p256 - OQS frodo1344aes hybrid */
     0x0305, /* p256 - OQS frodo1344shake hybrid */
     0x030E, /* p256 - OQS extrahope512 hybrid */
-    0x030F, /* p256 - OQS kyber512_90s hybrid */
-    0x0310, /* p256 - OQS kyber768_90s hybrid */
-    0x0311, /* p256 - OQS kyber1024_90s hybrid */
+    0x030F, /* p256 - OQS kyber512 hybrid */
+    0x0310, /* p256 - OQS kyber768 hybrid */
+    0x0311, /* p256 - OQS kyber1024 hybrid */
     0x031F, /* p256 - OQS sikep434 hybrid */
     0x0320, /* p256 - OQS sikep503 hybrid */
     0x0321, /* p256 - OQS sikep610 hybrid */

@@ -1200,9 +1200,9 @@ frodo976shake		1199
 frodo1344aes		1200
 frodo1344shake		1201
 extrahope512		1202
-kyber512_90s		1203
-kyber768_90s		1204
-kyber1024_90s		1205
+kyber512		1203
+kyber768		1204
+kyber1024		1205
 sikep434		1206
 sikep503		1207
 sikep610		1208
@@ -1215,9 +1215,9 @@ p256_frodo976shake		1214
 p256_frodo1344aes		1215
 p256_frodo1344shake		1216
 p256_extrahope512		1217
-p256_kyber512_90s		1218
-p256_kyber768_90s		1219
-p256_kyber1024_90s		1220
+p256_kyber512		1218
+p256_kyber768		1219
+p256_kyber1024		1220
 p256_sikep434		1221
 p256_sikep503		1222
 p256_sikep610		1223
